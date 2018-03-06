@@ -1,0 +1,21 @@
+{
+  "name": "app-pessoas",
+  "version": "1.0.0",
+  "description": "UFSC-INE-INE5646 - Exercício pessoas",
+  "scripts": {
+    "build": "babel src -d build",
+    "dev": "babel-node src/app.js"
+  },
+  "author": "Prof. Leandro J. Komosinski",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "eslint": "^4.18.1",
+    "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-node": "^6.0.1",
+    "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-standard": "^3.0.1"
+  }
+}
