@@ -1,12 +1,17 @@
 /**
-Seleciona as pessoas cuja idade é maior que idadeLimite.
+Seleciona as pessoas cuja idade ï¿½ maior que idadeLimite.
 pessoas: [pessoa.Pessoa]
 idadeLimite: number
 retorna: [pessoa.Pessoa]
 */
 function selecionaPessoas (pessoas, idadeLimite) {
-  //FIXME Deve retornar apenas as pessoas cuja idade seja superior a idade limite.
-  return pessoas
+  var result = []; // empty array
+  for (let i = 0; i < pessoas.length; i++) { // let declara variavel no escopo global
+    if (pessoas[i].idade > idadeLimite) {
+      result.push(pessoas[i]); // push is to add
+    }
+  }
+  return result
 }
 
 export {selecionaPessoas}
