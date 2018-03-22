@@ -17,13 +17,7 @@ class Equipe {
   }
 
   encontreAtletasComAlturmaMinima (alturaMinima) {
-    var result = [];
-    for (let i = 0; i < this.__atletas.length; i++) {
-      if (this.__atletas[i].altura >= alturaMinima) {
-        result.push(this.__atletas[i]);
-      }
-    }
-    return result;
+    return this.__atletas.filter(a => a.altura >= alturaMinima);
   }
 }
 
