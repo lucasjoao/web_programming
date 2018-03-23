@@ -12,7 +12,6 @@ class FilmesCadastrados extends React.Component {
         </div>
     } else {
       let p = this.props
-      // FIXME A tabela não deve mostrar o botão "Detalhes" para o filme selecionado
       conteudo = this.__monteTabela(p.titulos, p.onClick)
     }
 
@@ -57,11 +56,13 @@ class FilmesCadastrados extends React.Component {
 
   // monta o botão detalhes da linha
   __monteBotao (idFilme, onClick) {
-    let botao =
-        <BotaoDetalhes
-          id={idFilme}
-          onClick={onClick}/>
-
+    let botao;
+    if (this.props.idFilmeSelecionado !== idFilme) {
+      botao =
+          <BotaoDetalhes
+            id={idFilme}
+            onClick={onClick}/>
+    }
     return botao
   }
 }
