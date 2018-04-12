@@ -1,0 +1,4 @@
+node_modules
+servidor/bin
+servidor/publico/main.js
+bd_env.sh
