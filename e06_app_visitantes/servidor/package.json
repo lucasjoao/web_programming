@@ -4,6 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "bbn": "babel-node src/app.js",
+    "s": "nodemon --exec npm run bbn",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
