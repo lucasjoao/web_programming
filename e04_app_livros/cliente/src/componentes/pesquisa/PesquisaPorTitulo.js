@@ -77,7 +77,7 @@ class PesquisaPorTitulo extends React.Component {
     if (this.state.livros === null) {
       livros = [];
     } else if (this.state.livros !== undefined) {
-      livros = [this.state.livros];
+      livros = this.state.livros;
     }
 
     return (
