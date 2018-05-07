@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import {Panel} from 'primereact/components/panel/Panel'
 import {Button} from 'primereact/components/button/Button'
-import { Chart } from 'primereact/components/chart/Chart'
+import {Chart} from 'primereact/components/chart/Chart'
 
 import 'primereact/resources/primereact.min.css'
 import 'primereact/resources/themes/omega/theme.css'
@@ -26,9 +26,26 @@ class App extends Component {
   }
 
   render() {
+    let content;
+
+    if (this.state.exibindo === false) {
+      // about bind: https://goo.gl/pijUSq
+      content = <Button icon="fa-check" onClick={this.obtenhaDados.bind(this)}/>
+    } else {
+      let data = {
+        labels: this.state.meses,
+        datasets: [
+          {
+            label: 'Visitantes',
+            data: this.state.visitantes
+        }]
+      }
+      content = <Chart type="line" data={data} />
+    }
+
     return (
-      <Panel>
-        Número de visitantes no site.
+      <Panel header='Visitantes'>
+        <div>{content}</div>
       </Panel>
     );
   }
